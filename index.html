@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pollen — Visitor Intelligence</title>
+
+  <script
+    src="https://beta.sharepollen.com/pollen.js"
+    data-company-id="69e8d271248641ac81754e0b"
+    data-leadpost-audience-id="33316"
+    data-leadpost-script-url="https://rdcdn.com/rtjs?aid=33316"
+    data-leadpost-pixel-url="https://rdcdn.com/rt?aid=33316&e=1&img=1"
+  ></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow: #f5c842;
+      --yellow-light: #fef9e7;
+      --black: #0e0e0e;
+      --gray: #6b7280;
+      --border: #e5e7eb;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fafafa;
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--yellow);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
+    .pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0fdf4;
+      color: #16a34a;
+      border: 1px solid #bbf7d0;
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* HERO */
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .hero-inner {
+      max-width: 640px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--yellow-light);
+      border: 1px solid #fde68a;
+      color: #92400e;
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 58px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    h1 span {
+      background: linear-gradient(135deg, #d97706, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--gray);
+      line-height: 1.65;
+      margin-bottom: 48px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+      text-align: left;
+    }
+    @media (max-width: 600px) {
+      .cards { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .card-icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .card p {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* CTA */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--black);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 13px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .cta:hover { opacity: 0.8; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: #9ca3af;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <div class="logo-icon">🌼</div>
+      Pollen
+    </div>
+    <div class="pill">
+      <span class="pill-dot"></span>
+      Pixel active
+    </div>
+  </nav>
+
+  <main class="hero">
+    <div class="hero-inner">
+      <div class="badge">🔍 Visitor intelligence enabled</div>
+      <h1>Know who's visiting<br /><span>your website</span></h1>
+      <p class="subtitle">
+        Pollen identifies anonymous visitors and delivers their contact details directly to you — so you can follow up before they leave.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">👤</div>
+          <h3>Identify visitors</h3>
+          <p>Turn anonymous traffic into named contacts with company and job info.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Real-time delivery</h3>
+          <p>Leads are delivered to your dashboard the moment they're identified.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔁</div>
+          <h3>Convert to customers</h3>
+          <p>One click to turn a delivered lead into a tracked customer in Pollen.</p>
+        </div>
+      </div>
+
+      <a class="cta" href="https://beta.sharepollen.com">
+        Open Pollen Dashboard →
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    This page is used to verify Pollen visitor tracking · Audience ID 33316
+  </footer>
+
+</body>
+</html>
